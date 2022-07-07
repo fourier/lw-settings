@@ -6,9 +6,11 @@
   (:add-use-defaults t)
   (:export
    make-settings
+   settings
    company
    application-name
    application-version
+   product-name
    get-value
    set-value))
 
@@ -35,7 +37,7 @@ Linux it is a directory .config which follows the XDG Base Directory Specificati
             :initarg :application-version
             :initform "1.0"
             :documentation "Application version")
-   (product-symbol :reader product
+   (product-symbol :reader product-name
     :documentation "A symbol produced from the company name"))
   (:documentation "Settings class provides application-specific persistence settings"))
 
