@@ -57,6 +57,13 @@ Linux it is a directory .config which follows the XDG Base Directory Specificati
           (list +product-root+ company name version))))
 
 (defun make-settings (application-name application-company &optional (application-version "1.0"))
+  "Creates an instance of the settings class for persistent storage of the setttings, i.e.
+in registry in Windows or in .config/ directory in Linux.
+Parameters:
+APPLICATION-NAME (string) the name of the application, i.e. MyBrowser
+APPLICATION-COMPANY (string) the company or reverse url, i.e. com.example.my
+APPLICATION-VERSION (string) the current version of the settings instance. Different versions
+could co-exist."
   (check-type application-name string)
   (check-type application-company string)
   (check-type application-version string)
