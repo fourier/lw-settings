@@ -27,15 +27,12 @@ Linux it is a directory .config which follows the XDG Base Directory Specificati
 (defclass settings ()
   ((company :reader company
             :initarg :company
-            :initform "com.github.fourier"
             :documentation "Company name")
    (name :reader application-name
          :initarg :application-name
-         :initform "MediaImport"
          :documentation "Application name")
    (version :reader application-version
             :initarg :application-version
-            :initform "1.0"
             :documentation "Application version")
    (product-symbol :reader product-name
     :documentation "A symbol produced from the company name"))
@@ -51,6 +48,9 @@ Linux it is a directory .config which follows the XDG Base Directory Specificati
 
 (defmethod initialize-instance :after ((self settings) &key)
   "Constructor for SETTINGS class"
+  (assert (slot-boundp self 'company))
+  (assert (slot-boundp self 'name))
+  (assert (slot-boundp self 'version))
   (with-slots (company name version product-symbol) self
     ;; TODO: handle spaces and other symbols. Maybe replace
     ;; with dashes?
