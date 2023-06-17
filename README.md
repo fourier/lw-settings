@@ -1,3 +1,11 @@
-# Wrapper around LispWorks user-preference API
-A convenience wrapper around [LW user-preference](http://www.lispworks.com/documentation/lw80/lw/lw-lispworks-126.htm).
-Allows to specify defaults and provides settings path in directory-style form like "MyGeometrySettings/WindowPosition/X".
+# Give Up GitHub
+
+This project has given up GitHub.  ([See Software Freedom Conservancy's *Give Up  GitHub* site for details](https://GiveUpGitHub.org).)
+
+You can now find this project at [https://codeberg.org/fourier/lw-settings](https://codeberg.org/fourier/lw-settings) instead.
+
+Any use of this project's code by GitHub Copilot, past or present, is done without our permission.  We do not consent to GitHub's use of this project's code in Copilot.
+
+Join us; you can [give up GitHub](https://GiveUpGitHub.org) too!
+
+![Logo of the GiveUpGitHub campaign](https://sfconservancy.org/img/GiveUpGitHub.png)
